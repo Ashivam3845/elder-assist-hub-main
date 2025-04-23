@@ -1,0 +1,116 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 255 76.9% 74.9%; /* elder-purple */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 260 59% 94%; /* elder-light-purple */
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 254.1 59.2% 11.2%; /* elder-dark-purple */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%; /* elder-red */
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 255 76.9% 74.9%; /* elder-purple */
+
+    --radius: 0.8rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 255 76.9% 74.9%; /* elder-purple */
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 260 59% 94%; /* elder-light-purple */
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 260 59% 94%; /* elder-light-purple */
+    --sidebar-ring: 255 76.9% 74.9%; /* elder-purple */
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 255 76.9% 74.9%; /* elder-purple */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 260 59% 94%; /* elder-light-purple */
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 254.1 59.2% 11.2%; /* elder-dark-purple */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%; /* elder-red */
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 255 76.9% 74.9%; /* elder-purple */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-size: 16px;
+  }
+
+  h1 {
+    @apply text-3xl md:text-4xl font-bold tracking-tight;
+  }
+
+  h2 {
+    @apply text-2xl md:text-3xl font-semibold tracking-tight;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .elder-card {
+    @apply p-6 rounded-xl bg-white shadow-md border border-slate-200 transition-all hover:shadow-lg;
+  }
+  
+  .elder-button {
+    @apply px-4 py-3 rounded-lg text-white bg-elder-purple hover:bg-elder-dark-purple transition-all font-medium text-lg;
+  }
+  
+  .elder-input {
+    @apply p-3 text-lg border border-slate-200 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-elder-purple;
+  }
+}
